@@ -1,0 +1,54 @@
+﻿@model Desafio.App.ViewModels.AutorViewModel
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>Informação somente leitura</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sexo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sexo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PaisOrigem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaisOrigem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-dark" asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a class="btn btn-info" asp-action="Index">Voltar</a>
+</div>
